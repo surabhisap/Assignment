@@ -20,6 +20,11 @@ class WeatherViewModel {
         data[.humidity] = "\(main.humidity ?? 0)"
         return data
     }
+    
+    func trimWhiteSpaces(from city: String) -> String {
+        let trimmedString = city.replacingOccurrences(of: "\\s", with: "%20", options: .regularExpression)
+        return trimmedString
+    }
 }
 
 enum Weather: String, CaseIterable {

@@ -75,13 +75,27 @@ private extension ViewController {
     }
     
     @objc func submitAction() {
-        guard let city = cityTextField.text else { return }
+        guard let city = cityTextField.text, city.count > 0 else {
+            showSimpleAlert()
+            return
+        }
+        
+        let trimmedCity =  viewModel.trimWhiteSpaces(from: city)
         let destinationViewController = DetailTableViewController()
         
-        fetchData(city: city) { (data) in
+        fetchData(city: trimmedCity) { (data) in
             destinationViewController.weatherData = self.viewModel.weatheModel(main: data)
             self.navigationController?.pushViewController(destinationViewController, animated: true)
         }
     }
+    
+    func showSimpleAlert() {
+        let alert = UIAlertController(title: "Please enter city", message: nil, preferredStyle: .alert)
+
+           alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
+               //Cancel Action
+           }))
+           self.present(alert, animated: true, completion: nil)
+       }
 }
 
