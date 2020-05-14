@@ -12,9 +12,9 @@ import SnapKit
 class ViewController: UIViewController {
     
     let viewModel = WeatherViewModel()
-    let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
-    let cityTextField = UITextField(frame: CGRect(x: 0, y: 0, width: 200, height: 150))
-    let submitButton = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
+    let titleLabel = UILabel()
+    let cityTextField = UITextField()
+    let submitButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +29,6 @@ class ViewController: UIViewController {
 
 private extension ViewController {
     
-    func fetchData(city: String, completion: @escaping (Main) -> ()) {
-        Service.shared.fetchWeatherData(city: city) { (data, err) in
-            guard let weatherData = data else { return }
-            completion(weatherData)
-        }
-    }
-    
     func createTopLabel() {
         titleLabel.textAlignment = .center
         titleLabel.numberOfLines = 0
@@ -44,8 +37,8 @@ private extension ViewController {
         
         titleLabel.snp.makeConstraints { (make) in
             make.top.equalTo(150)
-            make.leading.equalTo(50)
-            make.trailing.equalTo(-50)
+            make.left.equalTo(50)
+            //make.width.equalTo(view.snp.width).dividedBy(2)
         }
     }
     
@@ -54,9 +47,10 @@ private extension ViewController {
         cityTextField.borderStyle = .roundedRect
         cityTextField.placeholder = "Enter city here"
         cityTextField.snp.makeConstraints { (make) in
-            make.top.equalTo(titleLabel.snp.bottom).offset(20)
-            make.leading.equalTo(50)
+            make.top.equalTo(150)
+            make.left.equalTo(titleLabel.snp.right).offset(20)
             make.trailing.equalTo(-50)
+            make.width.equalTo(titleLabel.snp.width)
         }
     }
     
@@ -82,9 +76,11 @@ private extension ViewController {
         
         let trimmedCity =  viewModel.trimWhiteSpaces(from: city)
         let destinationViewController = DetailTableViewController()
+        destinationViewController.delegate = self
         
-        fetchData(city: trimmedCity) { (data) in
-            destinationViewController.weatherData = self.viewModel.weatheModel(main: data)
+        viewModel.fetchData(city: trimmedCity) { (data) in
+            let weatherData = self.viewModel.weatheModel(main: data)
+            destinationViewController.viewModel = WeatherDetailsViewModel(weatherData: weatherData)
             self.navigationController?.pushViewController(destinationViewController, animated: true)
         }
     }
@@ -99,3 +95,9 @@ private extension ViewController {
        }
 }
 
+extension ViewController: WeatherDetailDelegate {
+    
+    func getColor(color: UIColor) {
+        submitButton.backgroundColor = color
+    }
+}

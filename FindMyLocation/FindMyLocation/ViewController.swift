@@ -50,7 +50,7 @@ class ViewController: UIViewController {
     func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:
-            mapView.showsUserLocation = true
+            mapView.showsUserLocation = true // shows user location, the blue dot
             centerViewOnUserLocation()
             locationManager.startUpdatingLocation()
             break

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E83F8A1246CA9FB00FB42F2 /* WeatherDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83F8A0246CA9FB00FB42F2 /* WeatherDetailsViewModel.swift */; };
 		0EA67A262465EBAF0085158F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA67A252465EBAF0085158F /* AppDelegate.swift */; };
 		0EA67A282465EBAF0085158F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA67A272465EBAF0085158F /* SceneDelegate.swift */; };
 		0EA67A2A2465EBAF0085158F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA67A292465EBAF0085158F /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		0C1137E41A700F53793EF080 /* Pods-WeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.release.xcconfig"; path = "Target Support Files/Pods-WeatherApp/Pods-WeatherApp.release.xcconfig"; sourceTree = "<group>"; };
+		0E83F8A0246CA9FB00FB42F2 /* WeatherDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsViewModel.swift; sourceTree = "<group>"; };
 		0E8564D571BFAA84256995A2 /* Pods_WeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA67A222465EBAF0085158F /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA67A252465EBAF0085158F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			children = (
 				0EA67A3D2465F3900085158F /* Service.swift */,
 				0EA915FC24660782003D53EC /* WeatherViewModel.swift */,
+				0E83F8A0246CA9FB00FB42F2 /* WeatherDetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			files = (
 				0EA915FB24660337003D53EC /* DetailTableViewController.swift in Sources */,
 				0EA67A2A2465EBAF0085158F /* ViewController.swift in Sources */,
+				0E83F8A1246CA9FB00FB42F2 /* WeatherDetailsViewModel.swift in Sources */,
 				0EA67A262465EBAF0085158F /* AppDelegate.swift in Sources */,
 				0EA67A3C2465ECAF0085158F /* OpenWeatherMapModel.swift in Sources */,
 				0EA67A282465EBAF0085158F /* SceneDelegate.swift in Sources */,

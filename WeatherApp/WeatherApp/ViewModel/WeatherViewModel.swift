@@ -25,6 +25,13 @@ class WeatherViewModel {
         let trimmedString = city.replacingOccurrences(of: "\\s", with: "%20", options: .regularExpression)
         return trimmedString
     }
+    
+    func fetchData(city: String, completion: @escaping (Main) -> ()) {
+           Service.shared.fetchWeatherData(city: city) { (data, err) in
+               guard let weatherData = data else { return }
+               completion(weatherData)
+           }
+       }
 }
 
 enum Weather: String, CaseIterable {

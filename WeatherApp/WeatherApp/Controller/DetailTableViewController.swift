@@ -8,11 +8,15 @@
 
 import UIKit
 
+protocol WeatherDetailDelegate: AnyObject {
+    func getColor(color: UIColor)
+}
+
 class DetailTableViewController: UITableViewController {
 
-    var weatherData: [Weather: String]?
+    var viewModel: WeatherDetailsViewConfigurable?
     
-    var fieldArray = Weather.allCases
+    weak var delegate: WeatherDetailDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,17 +29,23 @@ class DetailTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return fieldArray.count 
+        return viewModel?.fieldArray.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        let title = fieldArray[indexPath.row]
-        let detail = weatherData?[title]
-        cell.textLabel?.text = title.rawValue + " = " + (detail ?? "")
+        
+        if let title = viewModel?.fieldArray[indexPath.row] {
+            let detail = viewModel?.weatherData[title]
+            cell.textLabel?.text = title.rawValue + " = " + (detail ?? "")
+        }
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.getColor(color: .yellow)
+        navigationController?.popViewController(animated: true)
     }
 
 }
