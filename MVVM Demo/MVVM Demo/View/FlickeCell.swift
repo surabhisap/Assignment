@@ -11,7 +11,7 @@ import UIKit
 
 class FlickrCell: UITableViewCell {
     
-    var photoViewModel: PhotoViewModel! {
+    var photoViewModel: PhotoViewConfigurable! {
         didSet {
             textLabel?.text = photoViewModel.name
             detailTextLabel?.text = photoViewModel.url?.absoluteString

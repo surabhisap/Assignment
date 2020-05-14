@@ -11,7 +11,7 @@ import SnapKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var photoViewModels = [PhotoViewModel]()
+    var photoViewModels: [PhotoViewConfigurable]?
     let cellId = "cellId"
     let tableView = UITableView()
     
@@ -37,12 +37,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return photoViewModels.count
+        return photoViewModels?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! FlickrCell
-        let photoViewModel = photoViewModels[indexPath.row]
+        let photoViewModel = photoViewModels?[indexPath.row]
         cell.photoViewModel = photoViewModel
         return cell
     }

@@ -9,7 +9,14 @@
 import Foundation
 import UIKit
 
-struct PhotoViewModel {
+protocol PhotoViewConfigurable {
+    
+    var name: String { get }
+    var url: URL? { get }
+}
+
+
+struct PhotoViewModel: PhotoViewConfigurable {
     
     let name: String
     let url: URL?
