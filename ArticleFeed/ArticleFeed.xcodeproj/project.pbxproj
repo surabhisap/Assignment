@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E18A5A12473266400948D75 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E18A5A02473266400948D75 /* ArticleDetailViewController.swift */; };
+		0E18A5A5247326AF00948D75 /* ArticleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E18A5A4247326AF00948D75 /* ArticleDetailViewModel.swift */; };
 		0ED5C070246F3F13004193C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED5C06F246F3F13004193C9 /* AppDelegate.swift */; };
 		0ED5C072246F3F13004193C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED5C071246F3F13004193C9 /* SceneDelegate.swift */; };
 		0ED5C074246F3F13004193C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED5C073246F3F13004193C9 /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E18A5A02473266400948D75 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
+		0E18A5A4247326AF00948D75 /* ArticleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewModel.swift; sourceTree = "<group>"; };
 		0ED5C06C246F3F13004193C9 /* ArticleFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArticleFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ED5C06F246F3F13004193C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0ED5C071246F3F13004193C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				0ED5C087246F455B004193C9 /* ArticleViewModel.swift */,
+				0E18A5A4247326AF00948D75 /* ArticleDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -98,6 +103,7 @@
 			children = (
 				0ED5C089246F4F3C004193C9 /* CustomizedCell.swift */,
 				0ED5C073246F3F13004193C9 /* ViewController.swift */,
+				0E18A5A02473266400948D75 /* ArticleDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -255,8 +261,10 @@
 				0ED5C070246F3F13004193C9 /* AppDelegate.swift in Sources */,
 				0ED5C088246F455B004193C9 /* ArticleViewModel.swift in Sources */,
 				0ED5C08A246F4F3C004193C9 /* CustomizedCell.swift in Sources */,
+				0E18A5A5247326AF00948D75 /* ArticleDetailViewModel.swift in Sources */,
 				0ED5C072246F3F13004193C9 /* SceneDelegate.swift in Sources */,
 				0ED5C086246F3FE3004193C9 /* Article.swift in Sources */,
+				0E18A5A12473266400948D75 /* ArticleDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

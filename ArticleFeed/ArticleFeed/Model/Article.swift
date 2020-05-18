@@ -21,4 +21,8 @@ struct Response: Codable {
 struct Docs: Codable {
     let title_display: String?
     let journal: String?
+    let article_type: String?
+    let author_display: [String]?
+    let abstract: [String]?
+    let score: Double?
 }

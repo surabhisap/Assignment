@@ -58,4 +58,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let doc = docs?[indexPath.row]
+        
+        let detailVC = ArticleDetailViewController()
+        detailVC.doc = doc
+        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
 }
