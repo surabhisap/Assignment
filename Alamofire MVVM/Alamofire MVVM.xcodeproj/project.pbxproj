@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E03716B2475DDA900EAEB9A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E03716A2475DDA900EAEB9A /* DetailViewController.swift */; };
+		0E03716F2475E55A00EAEB9A /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E03716E2475E55A00EAEB9A /* DetailViewModel.swift */; };
 		0E6DF69F2474B81000326DA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6DF69E2474B81000326DA2 /* AppDelegate.swift */; };
 		0E6DF6A12474B81000326DA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6DF6A02474B81000326DA2 /* SceneDelegate.swift */; };
 		0E6DF6A32474B81000326DA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6DF6A22474B81000326DA2 /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E03716A2475DDA900EAEB9A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0E03716E2475E55A00EAEB9A /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		0E6DF69B2474B81000326DA2 /* Alamofire MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alamofire MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E6DF69E2474B81000326DA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E6DF6A02474B81000326DA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				0E6DF6B62474B95D00326DA2 /* PhotoViewModel.swift */,
+				0E03716E2475E55A00EAEB9A /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 			children = (
 				0E6DF6A22474B81000326DA2 /* ViewController.swift */,
 				0E6DF6BC2474BA9A00326DA2 /* PhotoCell.swift */,
+				0E03716A2475DDA900EAEB9A /* DetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -254,9 +260,11 @@
 				0E6DF6B32474B93A00326DA2 /* Photo.swift in Sources */,
 				0E6DF6B72474B95D00326DA2 /* PhotoViewModel.swift in Sources */,
 				0E6DF6A32474B81000326DA2 /* ViewController.swift in Sources */,
+				0E03716F2475E55A00EAEB9A /* DetailViewModel.swift in Sources */,
 				0E6DF6B52474B94800326DA2 /* Service.swift in Sources */,
 				0E6DF69F2474B81000326DA2 /* AppDelegate.swift in Sources */,
 				0E6DF6A12474B81000326DA2 /* SceneDelegate.swift in Sources */,
+				0E03716B2475DDA900EAEB9A /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -48,6 +48,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let photoViewModels = photoViewModels else { return }
+        let detailViewController = DetailViewController()
+        let detailViewModel = DetailViewModel(photoModel: photoViewModels[indexPath.row])
+        detailViewController.viewModel = detailViewModel
+        self.navigationController?.pushViewController(detailViewController, animated: true)
+    }
+    
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -69,9 +77,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     private func setupNavBar() {
         navigationItem.title = "Photos"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.backgroundColor = .gray
-        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.backgroundColor = .lightGray
         navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
     }
     
